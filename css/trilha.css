@@ -1,0 +1,75 @@
+* {box-sizing:border-box}
+
+body{
+	background-image: url("../img/The\ kdrama\ start\ up.jpg");
+	background-size: 10cm;
+}
+
+.container { 
+    background-position: center;
+	width: 1300px;
+	margin-right: auto;  
+	margin-left: auto;
+	display: flex;  flex-wrap: wrap;
+}
+
+
+.cabecalho {  
+	order: 1;
+    color: orange;
+    text-align: center;
+    font: italic bold 20px ariaOCR A Std, monospace;
+	border-bottom: 1px solid orange;  
+	margin-bottom: 10px;   
+    opacity: 0.8;
+	width: 100%;  
+	display: flex;
+    left: 10cm;
+   
+}
+
+.corpo {  
+	width: 100%;
+	order: 3;
+    border-left: 1px dashed #000000;  
+	padding: 10px;
+	background:#87CEEB;
+    opacity: 0.9;
+    font: italic bold 20px ariaOCR A Std, monospace; 
+}
+p{
+    color: #4F4F4F;
+}
+	
+
+h2, h3{
+    color:#008000;
+}
+.corpo img{
+    width: 250px;
+	height: auto;
+    opacity: 1;
+    border-radius: 20%;
+}
+
+.rodape {  
+	order: 5;
+	border-top: 1px solid #000000;  
+	padding: 30px;
+	margin-top: 20px;
+	width: 100%;  
+	display: flex;  
+}
+.btn{
+    order:4;
+    font-family: ariaOCR A Std, monospace;
+    text-transform: uppercase;
+    padding: auto;
+    cursor:pointer;
+    display: inline-block;
+    text-decoration: none;
+    background: orange;
+    color: #fff;
+    box-shadow: 0 5px 0 orangered;
+} 
+
