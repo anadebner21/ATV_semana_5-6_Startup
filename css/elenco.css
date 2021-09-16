@@ -1,0 +1,86 @@
+* {box-sizing:border-box}
+
+body{
+	background-image: url("../img/Doodle\ pattern\ cinema\ by\ Netkoff\ on\ Creative\ Market.jpg");
+	background-size: 20cm;
+}
+
+.container { 
+	width: 1000px;
+	margin-right: auto;  
+	margin-left: auto;
+	display: flex;  flex-wrap: wrap;
+}
+
+
+.cabecalho {  
+	order: 1;
+     text-align: center;
+    color:green;
+    text-align: center;
+
+    font: italic bold 20px ariaOCR A Std, monospace;
+	
+	
+	margin-bottom: 10px;   
+    opacity: 0.8;
+	width: 40%;  
+	display: flex;
+    left: 10cm;
+    background-color: #F1F1F1;
+    text-align: center;
+    padding: 20px;
+}
+
+.corpo {  
+	width: 100%;
+	order: 3;
+    border-left: 1px dashed #000000;  
+	padding: 10px;
+	background: orange;
+    opacity: 1;
+    font: italic bold 20px ariaOCR A Std, monospace; 
+}
+	
+
+h2, h3{
+    color: green;
+}
+.corpo img{
+    width: 250px;
+	height: auto;
+    opacity: 1;
+    border-radius: 20%;
+}
+
+.rodape {  
+	order: 5;
+	border-top: 1px solid #000000;  
+	padding: 30px;
+	margin-top: 20px;
+	width: 100%;  
+	display: flex;  
+}
+.column {
+    float: left;
+    width: 50%;
+  }
+  
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  .btn{
+    order:4;
+    font-family: ariaOCR A Std, monospace;
+    text-transform: uppercase;
+    padding: auto;
+    cursor:pointer;
+    display: inline-block;
+    text-decoration: none;
+    background: green;
+    color: #fff;
+    box-shadow: 0 5px 0 orangered;
+  }

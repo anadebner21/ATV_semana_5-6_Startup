@@ -3,7 +3,7 @@
 }
 
 body{
-	background-image: url("../img/fundo.png");
+	background-image: url("../img/gifstart.gif");
 	background-size: 36cm; 
 }
 
@@ -40,11 +40,14 @@ li:hover{
 
 .menu {  
 	width: 20%; 
-	order: 2;  
+	order: 2;
+    color:green;  
 	padding: 5px;  
 	font-size: 110%;
-    background-color: grey;
+    background-color: white;
     opacity: 0.8;
+    font: italic bold 20px ariaOCR A Std, monospace;
+
 }
 
 .corpo {  
@@ -52,8 +55,8 @@ li:hover{
 	order: 3;
 	border-left: 1px dashed #000000;  
 	padding: 10px;
-	background:white;
-    opacity: 0.9;
+	background: orange;
+    opacity: 0.8;
 	
 }
 .corpo img{
