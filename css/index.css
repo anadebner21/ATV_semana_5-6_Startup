@@ -5,50 +5,78 @@
 body{
 	background-image: url("../img/gifstart.gif");
 	background-size: 36cm; 
+  
 }
 
 li:hover{
 	color: white;
 	background-color:orangered;
+  
 }
 
 .cabecalho img{
 	width: 100px;
 	height: auto;
-    opacity: 1;
+  opacity: 1;
+  
 }
 
+
+
 .container { 
-	width: 1100px;
-	margin-right: auto;  
-	margin-left: auto;
-	display: flex;  flex-wrap: wrap;
+  width: 1100px;
+  margin-right: auto;  
+  margin-left: auto;
+  display: flex;  
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 10px;
 }
+ 
+
 
 .cabecalho {  
 	order: 1;
-    color: green;
-    font: italic bold 20px ariaOCR A Std, monospace;
+  color: green;
+  font: italic bold 20px ariaOCR A Std, monospace;
 	border-bottom: 1px solid green;  
 	padding: 10px;
 	margin-bottom: 10px;
 	background-color:orange;
-    opacity: 0.8;
+  opacity: 0.8;
 	width: 100%;  
-	display: flex;  
+  font-size: clamp(1em, 1em + 1vw, 1.5em);
+
+}
+header{
+  display: flex;  
+  justify-content: center;
+
 }
 
 .menu {  
 	width: 20%; 
 	order: 2;
-    color:green;  
+  color:green;  
 	padding: 5px;  
 	font-size: 110%;
-    background-color: white;
-    opacity: 0.8;
-    font: italic bold 20px ariaOCR A Std, monospace;
-
+  background-color: white;
+  opacity: 0.8;
+  font: italic bold 20px ariaOCR A Std, monospace;
+  display: flex;
+  font-size: clamp(1em, 1em + 1vw, 1.1em);
+  flex-direction: column;
 }
+.menu li a {
+    display: block;
+    text-decoration: none;
+}
+.menu li a:hover {
+  display: block;
+  text-decoration: none;
+}
+
+
 
 .corpo {  
 	width: 80%;
@@ -56,8 +84,10 @@ li:hover{
 	border-left: 1px dashed #000000;  
 	padding: 10px;
 	background: orange;
-    opacity: 0.8;
-	
+  opacity: 0.8;
+	flex-direction: row;
+  justify-content: flex-start; 
+  font-size: clamp(1em, 1em + 1vm, 1.25);
 }
 .corpo img{
     width: 500px;
@@ -126,4 +156,99 @@ li:hover{
   
     transform: rotateY(180deg);
   }
- 
+
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+
+.mySlides {
+  display: none;
+}
+
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.mySlides {
+    display: none;
+  }
+  
+  .cursor {
+    cursor: pointer;
+  }
+  
+  .prev,
+  .next {
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    width: auto;
+    padding: 10px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 10px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+  
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+
+  .prev:hover,
+  .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+
+  
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  .column {
+    float: left;
+    width: 10%;
+  }
+  
+  .demo {
+    opacity: 0.6;
+  }
+  
+  .active,
+  .demo:hover {
+    opacity: 1;
+  }
+
+  .btn{
+    order:4;
+    font-family: ariaOCR A Std, monospace;
+    text-transform: uppercase;
+    padding: auto;
+    cursor:pointer;
+    display: inline-block;
+    text-decoration: none;
+    background: blue;
+    color: #fff;
+    box-shadow: 0 5px 0 black;
+}

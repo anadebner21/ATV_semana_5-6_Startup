@@ -6,21 +6,21 @@ body{
 }
 
 .container { 
-	width: 1300px;
-	margin-right: auto;  
-	margin-left: auto;
-	display: flex;  flex-wrap: wrap;
+  width: 1300px;
+  margin-right: auto;  
+  margin-left: auto;
+  
 }
 
 
 .cabecalho {  
 	order: 1;
-    color: black;
-    font: italic bold 20px ariaOCR A Std, monospace;
+  color: black;
+  font: italic bold 20px ariaOCR A Std, monospace;
 	border-bottom: 1px solid green;  
 	padding: 10px;
 	margin-bottom: 10px;   
-    opacity: 1;
+  opacity: 1;
 	width: 100%;  
 	display: flex;  
 }
@@ -31,14 +31,14 @@ body{
 	border-left: 1px dashed #000000;  
 	padding: 10px;
 	background:white;
-    opacity: 0.9;
+  opacity: 0.9;
 	
 }
 .corpo img{
-    width: 300px;
+  width: 300px;
 	height: auto;
-    opacity: 1;
-    border-radius: 20%;
+  opacity: 1;
+  border-radius: 20%;
 }
 
 .rodape {  
@@ -120,20 +120,5 @@ body{
     box-shadow: 0 5px 0 black;
 }
 
-
-
-/*.imagem{
-    width: 100%;
-    height: auto;
-    opacity: 1;
-    border-radius: 20%;
-}
-
-.imagem cursor{
-    width: 100%;
-    height: auto;
-    opacity: 1;
-    border-radius: 20%; 
-} eu tentei colocar essas classes pra ajustar as imagens 
 
   
