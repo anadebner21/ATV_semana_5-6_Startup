@@ -6,6 +6,16 @@ body{
 }
 
 .container { 
+  display:grid;
+	grid-template-columns: 
+	    150px 2fr auto;  	
+	grid-template-rows:	auto;  
+	grid-template-areas:
+		"cab cab cab"  
+		"corpo corpo corpo"  	
+		"rod rod rod";
+	grid-gap: 50px;
+    background-position: center;
   width: 1300px;
   margin-right: auto;  
   margin-left: auto;
@@ -14,6 +24,7 @@ body{
 
 
 .cabecalho {  
+  grid-area: cab;
 	order: 1;
   color: black;
   font: italic bold 20px ariaOCR A Std, monospace;
@@ -22,10 +33,17 @@ body{
 	margin-bottom: 10px;   
   opacity: 1;
 	width: 100%;  
-	display: flex;  
+  font-size: clamp(1em, 1em + 1vw, 1.5em);
+
+}
+header{
+  display: flex;  
+  justify-content: center;
+
 }
 
 .corpo {  
+  grid-area: corpo;
 	width: 100%;
 	order: 3;
 	border-left: 1px dashed #000000;  
@@ -41,8 +59,9 @@ body{
   border-radius: 20%;
 }
 
-.rodape {  
-	order: 5;
+.rodape { 
+  grid-area: rod;
+ 	order: 5;
 	border-top: 1px solid #000000;  
 	padding: 30px;
 	margin-top: 20px;
@@ -131,15 +150,10 @@ body{
     width: 500px;
   }
 
-  nav {
-    width: 100%;
-    order: 2;
-
-  }
 
   main {
     width: 100%;
-    order: 3;
+    order: 2;
     border-right: none;
   }
 
@@ -149,7 +163,10 @@ body{
   }
 
   header h1 {
-    display: none;
+    display: flex;
+   justify-content: space-between;
+   align-itens: center;
+   flex-wrap: wrap;
   }
 }
 

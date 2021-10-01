@@ -6,22 +6,30 @@ body{
 }
 
 .container { 
+    display:grid;
+	grid-template-columns: 
+	    150px 2fr auto;  	
+	grid-template-rows:	auto;  
+	grid-template-areas:
+		"cab cab cab"  
+		"corpo corpo corpo"  	
+		"rod rod rod";
+	grid-gap: 50px;
+    background-position: center;
 	width: 1000px;
 	margin-right: auto;  
 	margin-left: auto;
-	display: flex;  flex-wrap: wrap;
 }
 
 
-.cabecalho {  
+.cabecalho { 
+    grid-area: cab;
+ 
 	order: 1;
      text-align: center;
     color:green;
     text-align: center;
-
     font: italic bold 20px ariaOCR A Std, monospace;
-	
-	
 	margin-bottom: 10px;   
     opacity: 0.8;
 	width: 40%;  
@@ -30,10 +38,17 @@ body{
     background-color: #F1F1F1;
     text-align: center;
     padding: 20px;
+    font-size: clamp(1em, 1em + 1vw, 1.5em);
 }
+header{
+    display: flex;  
+    justify-content: center;
+  
+  }
 
 .corpo {  
-	width: 100%;
+    grid-area: corpo;
+    width: 100%;
 	order: 3;
     border-left: 1px dashed #000000;  
 	padding: 10px;
@@ -54,6 +69,7 @@ h2, h3{
 }
 
 .rodape {  
+    grid-area: rod;
 	order: 5;
 	border-top: 1px solid #000000;  
 	padding: 30px;
@@ -96,9 +112,10 @@ h2, h3{
       width: 500px;
     }
   
+  
     main {
       width: 100%;
-      order: 3;
+      order: 2;
       border-right: none;
     }
   
@@ -108,7 +125,10 @@ h2, h3{
     }
   
     header h1 {
-      display: none;
+      display: flex;
+     justify-content: space-between;
+     align-itens: center;
+     flex-wrap: wrap;
     }
   }
   

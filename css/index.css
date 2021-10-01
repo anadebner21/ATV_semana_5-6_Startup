@@ -17,26 +17,33 @@ li:hover{
 .cabecalho img{
 	width: 100px;
 	height: auto;
-  opacity: 1;
+        opacity: 1;
   
 }
 
 
 
 .container { 
+  display:grid;
+	grid-template-columns: 
+	    150px 2fr auto;  	
+	grid-template-rows:	auto;  
+	grid-template-areas:
+		"cab cab cab"  
+		"menu corpo corpo"  	
+		"rod rod rod";
+	grid-gap: 50px;
   width: 1100px;
   margin-right: auto;  
   margin-left: auto;
-  display: flex;  
-  flex-wrap: wrap;
-  justify-content: center;
-  padding: 10px;
+  padding: 25px;
+
 }
  
 
 
 .cabecalho {  
-	order: 1;
+  grid-area: cab;
   color: green;
   font: italic bold 20px ariaOCR A Std, monospace;
 	border-bottom: 1px solid green;  
@@ -46,6 +53,7 @@ li:hover{
   opacity: 0.8;
 	width: 100%;  
   font-size: clamp(1em, 1em + 1vw, 1.5em);
+	
 
 }
 header{
@@ -55,21 +63,20 @@ header{
 }
 
 .menu {  
-	width: 20%; 
-	order: 2;
-  color:green;  
-	padding: 5px;  
+	grid-area: menu;
+        width: 130%;
 	font-size: 110%;
-  background-color: white;
-  opacity: 0.8;
-  font: italic bold 20px ariaOCR A Std, monospace;
-  display: flex;
-  flex-direction: column;
+        background-color: white;
+        opacity: 0.8;
+        font: italic bold 20px ariaOCR A Std, monospace;
+
 }
 .menu li a {
     display: block;
     text-decoration: none;
+    text-align: left;
     font-size: clamp(0.5em, 1em + 1vw, 1.1em);
+		
 
 }
 .menu li a:hover {
@@ -78,21 +85,19 @@ header{
 }
 nav{
   display: flex;
-  flex-wrap: wrap;
+   justify-content: space-between;
+   align-itens: center;
+   flex-wrap: wrap;
 }
 
 
 
 .corpo {  
-	width: 80%;
-	order: 3;
+	grid-area: corpo;
 	border-left: 1px dashed #000000;  
 	padding: 10px;
 	background: orange;
-  opacity: 0.8;
-	flex-direction: row;
-  justify-content: flex-start; 
-  font-size: clamp(1em, 1em + 1vm, 1.25);
+        opacity: 0.8;
 }
 .corpo img{
     width: 500px;
@@ -103,12 +108,8 @@ nav{
 
 
 .rodape {  
-	order: 5;
-	border-top: 1px solid #000000;  
-	padding: 30px;
-	margin-top: 20px;
-	width: 100%;  
-	display: flex;  
+	grid-area: rod;
+	border-top: 1px solid #000000;   
 }
 
 .btn{
@@ -287,7 +288,10 @@ nav{
   }
 
   header h1 {
-    display: none;
+    display: flex;
+   justify-content: space-between;
+   align-itens: center;
+   flex-wrap: wrap;
   }
 }
 
