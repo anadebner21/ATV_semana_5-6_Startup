@@ -5,7 +5,7 @@
 body{
 	background-image: url("../img/gifstart.gif");
 	background-size: 36cm; 
-  
+  display: flexbox;
 }
 
 li:hover{
@@ -64,16 +64,21 @@ header{
   opacity: 0.8;
   font: italic bold 20px ariaOCR A Std, monospace;
   display: flex;
-  font-size: clamp(1em, 1em + 1vw, 1.1em);
   flex-direction: column;
 }
 .menu li a {
     display: block;
     text-decoration: none;
+    font-size: clamp(0.5em, 1em + 1vw, 1.1em);
+
 }
 .menu li a:hover {
   display: block;
   text-decoration: none;
+}
+nav{
+  display: flex;
+  flex-wrap: wrap;
 }
 
 
@@ -251,4 +256,58 @@ header{
     background: blue;
     color: #fff;
     box-shadow: 0 5px 0 black;
+}
+
+@media screen and (max-width: 970px) {
+  .container {
+    width: 700px;
+  }
+}
+
+@media screen and (max-width: 770px) {
+  .container {
+    width: 500px;
+  }
+
+  nav {
+    width: 100%;
+    order: 2;
+
+  }
+
+  main {
+    width: 100%;
+    order: 3;
+    border-right: none;
+  }
+
+  header {
+    flex-wrap:wrap;
+    justify-content: center;
+  }
+
+  header h1 {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 570px) {
+  body {
+    margin: 0;
+  }
+  
+  .container {
+    width: 100%;
+  }
+
+  main h3 {
+    width: 100%;
+  }
+
+  main figure {
+    float: none;
+    margin: 0;
+    width: 100%;
+  }
+
 }
