@@ -60,6 +60,8 @@ header{
     opacity: 1;
     font: italic bold 20px ariaOCR A Std, monospace; 
     flex-wrap: wrap;
+    font-size: clamp(0.5em, 1em + 1vw, 1.2em);
+
 }
 	
 
@@ -67,8 +69,9 @@ h2, h3{
     color: blue;
 }
 .corpo img{
-    width: 250px;
 	height: auto;
+	width: 100%;
+	max-width:250px;
     opacity: 1;
     border-radius: 20%;
 }
@@ -83,13 +86,14 @@ h2, h3{
 	display: flex;  
 }
 .column {
-    float: left;
-    width: 25%;
+    float:left;
+    width: auto;
+    
   }
   
 .row:after {
     content: "";
-    display: table;
+    display:table;
     clear: both;
   }
 
